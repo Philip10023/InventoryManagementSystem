@@ -1,4 +1,4 @@
 # InventoryManagementSystem
 
-# Contributers
+# contributors
 # Philip Morgan
