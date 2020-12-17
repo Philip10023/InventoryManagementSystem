@@ -10,32 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace InventoryManagement
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LotDetails.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LotDetails : Window
     {
-        public MainWindow()
+        public LotDetails()
         {
             InitializeComponent();
         }
 
-        private void Lot_Details_Btn_Click(object sender, RoutedEventArgs e)
+        private void Lot_Details_Close_Btn_Click(object sender, RoutedEventArgs e)
         {
-            LotDetails win2 = new LotDetails();
-            win2.Show();
-            this.Close();
-        }
-
-        private void Part_Num_Details_Btn_Click(object sender, RoutedEventArgs e)
-        {
-            PartNumberDetails win3 = new PartNumberDetails();
-            win3.Show();
+            MainWindow win1 = new MainWindow();
+            win1.Show();
             this.Close();
         }
     }
