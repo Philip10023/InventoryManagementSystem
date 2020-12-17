@@ -5,23 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InventoryManagement"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="MainWindow" Height="750" Width="1500">
-    <Grid>
+    <Grid DataContext="">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="114*"/>
             <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="234*"/>
         </Grid.ColumnDefinitions>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="668" Margin="10,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="149"/>
         <Button x:Name="lotDetailsBtn" Content="Lot Details" HorizontalAlignment="Left" Margin="28,84,0,0" VerticalAlignment="Top" Width="108" Height="51" Click="Lot_Details_Btn_Click"/>
         <Button Content="Part Num Details" HorizontalAlignment="Left" Margin="28,157,0,0" VerticalAlignment="Top" Width="108" Height="51" Click="Part_Num_Details_Btn_Click"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="28,237,0,0" VerticalAlignment="Top" Width="108" Height="51"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="28,310,0,0" VerticalAlignment="Top" Width="108" Height="51"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="668" Margin="180,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="1302" Grid.ColumnSpan="2"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="88,66,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="131,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <DataGrid HorizontalAlignment="Left" Height="546" Margin="235,127,0,0" VerticalAlignment="Top" Width="1187" Grid.ColumnSpan="2"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="284,70,0,0" VerticalAlignment="Top" Width="74" Grid.Column="1"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="384,70,0,0" VerticalAlignment="Top" Width="74" Grid.Column="1"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="668" Margin="180,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="1302" Grid.ColumnSpan="3"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="88,66,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="mainInput" HorizontalAlignment="Left" Height="20" Margin="31,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <DataGrid x:Name="lotDataGrid" HorizontalAlignment="Left" Height="546" Margin="235,127,0,0" VerticalAlignment="Top" Width="1187" Grid.ColumnSpan="3">
+
+        </DataGrid>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="184,70,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="284,70,0,0" VerticalAlignment="Top" Width="74" Grid.Column="2"/>
 
     </Grid>
 </Window>

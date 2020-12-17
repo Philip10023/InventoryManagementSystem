@@ -9,6 +9,8 @@ namespace InventoryManagement
     [Table("tblLocation")]
     public partial class tblLocation
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("ID")]
         public int ID { get; set; }
 
         [StringLength(128)]

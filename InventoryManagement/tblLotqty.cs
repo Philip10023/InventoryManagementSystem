@@ -9,6 +9,8 @@ namespace InventoryManagement
     [Table("tblLotqty")]
     public partial class tblLotqty
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("ID")]
         public int ID { get; set; }
 
         public int QTY_Added_Removed { get; set; }

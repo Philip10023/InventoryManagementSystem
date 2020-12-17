@@ -15,6 +15,8 @@ namespace InventoryManagement
             tblLotqties = new HashSet<tblLotqty>();
         }
 
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("ID")]
         public int ID { get; set; }
 
         [Required]
