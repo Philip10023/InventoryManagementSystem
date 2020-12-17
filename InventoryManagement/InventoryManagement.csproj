@@ -118,6 +118,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\InventoryManagement.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\InventoryManagement.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\tblLocation.datasource" />
+    <None Include="Properties\DataSources\tblLotNum.datasource" />
+    <None Include="Properties\DataSources\tblLotqty.datasource" />
+    <None Include="Properties\DataSources\tblPartNum.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

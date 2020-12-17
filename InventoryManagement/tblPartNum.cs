@@ -15,6 +15,16 @@ namespace InventoryManagement
             tblLotNums = new HashSet<tblLotNum>();
         }
 
+        /*
+        public tblPartNum(int id, string partnum, string partnote, string partdesc) 
+        {
+            id = id;
+            partnum = partnum;
+            partnote = partnote;
+            partdesc = partdesc;
+        }
+        */
+
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
         public int ID { get; set; }

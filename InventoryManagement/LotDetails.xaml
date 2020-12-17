@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InventoryManagement"
         mc:Ignorable="d"
-        Title="LotDetails" Height="550" Width="1200">
+        Title="LotDetails" Height="550" Width="1200"
+        Loaded="Window_Loaded">
     <Grid>
         <Rectangle Fill="#FFAFD3FF" HorizontalAlignment="Left" Height="174" Margin="44,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="1095"/>
         <Rectangle Fill="#FFC3C3C3" HorizontalAlignment="Left" Height="285" Margin="26,216,0,0" Stroke="Black" VerticalAlignment="Top" Width="1134"/>
         <Label Content="Lot Details" HorizontalAlignment="Left" Margin="606,29,0,0" VerticalAlignment="Top" FontSize="32"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="56" Margin="63,114,0,0" Stroke="Black" VerticalAlignment="Top" Width="732"/>
-        <Button Content="Save and New" HorizontalAlignment="Left" Margin="163,133,0,0" VerticalAlignment="Top" Width="80" Background="#FFF4F4F5" BorderBrush="#FFF4F4F5"/>
+        <Button Content="Save and New" HorizontalAlignment="Left" Margin="163,133,0,0" VerticalAlignment="Top" Width="80" Background="#FFF4F4F5" BorderBrush="#FFF4F4F5" Click="Button_Click"/>
         <Button Content="Email" HorizontalAlignment="Left" Margin="308,133,0,0" VerticalAlignment="Top" Width="75" BorderBrush="#FFF4F4F5" Background="#FFF4F4F5"/>
         <Button Content="Print" HorizontalAlignment="Left" Margin="448,133,0,0" VerticalAlignment="Top" Width="75" Background="#FFF4F4F5" BorderBrush="#FFF4F4F5"/>
         <Button Content="Close" HorizontalAlignment="Left" Margin="572,133,0,0" VerticalAlignment="Top" Width="75" BorderBrush="#FFF4F4F5" Background="#FFF4F4F5" Click="Lot_Details_Close_Btn_Click"/>
@@ -31,21 +32,21 @@
         <Label Content="Dates" HorizontalAlignment="Left" Margin="926,253,0,0" VerticalAlignment="Top"/>
         <Label Content="Initials" HorizontalAlignment="Left" Margin="1056,253,0,0" VerticalAlignment="Top"/>
         <Label Content="Reason For Change" HorizontalAlignment="Left" Margin="965,343,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="53,290,0,0" VerticalAlignment="Top" Width="100"/>
-        <ComboBox HorizontalAlignment="Left" Margin="169,290,0,0" VerticalAlignment="Top" Width="100"/>
-        <ComboBox HorizontalAlignment="Left" Margin="283,290,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="116" Margin="546,311,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="132"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="53,434,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,289,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="173,434,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="283,434,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="402,434,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="756,289,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="756,378,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="756,453,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="896,290,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="1026,290,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="102" Margin="945,374,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="181"/>
+        <ComboBox x:Name="partNumBox" HorizontalAlignment="Left" Margin="53,290,0,0" VerticalAlignment="Top" Width="100"/>
+        <ComboBox x:Name="descriptionBox" HorizontalAlignment="Left" Margin="169,290,0,0" VerticalAlignment="Top" Width="100"/>
+        <ComboBox x:Name="uomBox" HorizontalAlignment="Left" Margin="283,290,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="clientComments" HorizontalAlignment="Left" Height="116" Margin="546,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+        <TextBox x:Name="lotNum" HorizontalAlignment="Left" Height="23" Margin="53,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="partCost" HorizontalAlignment="Left" Height="23" Margin="408,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="expirationDate" HorizontalAlignment="Left" Height="23" Margin="173,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="quantityInStock" HorizontalAlignment="Left" Height="23" Margin="283,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="inventory" HorizontalAlignment="Left" Height="23" Margin="402,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="quantityAdded" HorizontalAlignment="Left" Height="23" Margin="756,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="location" HorizontalAlignment="Left" Height="23" Margin="756,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="status" HorizontalAlignment="Left" Height="23" Margin="756,453,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="dates" HorizontalAlignment="Left" Height="23" Margin="896,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="initials" HorizontalAlignment="Left" Height="23" Margin="1026,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="reasonForChange" HorizontalAlignment="Left" Height="102" Margin="945,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"/>
 
     </Grid>
 </Window>

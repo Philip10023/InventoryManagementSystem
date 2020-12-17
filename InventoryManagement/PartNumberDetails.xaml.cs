@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,22 @@ namespace InventoryManagement
             MainWindow win1 = new MainWindow();
             win1.Show();
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            String partNum = partNumber.Text;
+            String desc = description.Text;
+            String nt = notes.Text;
+
+            //var id = Guid.NewGuid();
+
+            /*using (var db = new Model1())
+            {
+                db.tblPartNums.Add(new tblPartNum(id, partNum, desc, nt));
+                db.SaveChanges();
+            }
+            */
         }
     }
 }

@@ -10,17 +10,17 @@
         <Rectangle Fill="#FFBEDA9C" HorizontalAlignment="Left" Height="102" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="422"/>
         <Label Content="Part Number Details" HorizontalAlignment="Left" Margin="124,26,0,0" VerticalAlignment="Top" FontSize="22"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="48" Margin="10,112,0,0" Stroke="Black" VerticalAlignment="Top" Width="422"/>
-        <Button Content="Save and New" HorizontalAlignment="Left" Margin="45,126,0,0" VerticalAlignment="Top" Width="80" Background="#FFF4F4F5" BorderBrush="#FFF4F4F5"/>
+        <Button Content="Save and New" HorizontalAlignment="Left" Margin="45,126,0,0" VerticalAlignment="Top" Width="80" Background="#FFF4F4F5" BorderBrush="#FFF4F4F5" Click="Button_Click"/>
         <Button Content="Close" HorizontalAlignment="Left" Margin="170,126,0,0" VerticalAlignment="Top" Width="46" BorderBrush="#FFF4F4F5" Background="#FFF4F4F5" Click="Part_Num_Details_Close_Btn_Click"/>
         <Label Content="Go To" HorizontalAlignment="Left" Margin="250,123,0,0" VerticalAlignment="Top" Height="25"/>
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="294" Margin="10,165,0,0" Stroke="Black" VerticalAlignment="Top" Width="422"/>
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="262" Margin="69,183,0,0" Stroke="Black" VerticalAlignment="Top" Width="301"/>
         <Label Content="Part Number" HorizontalAlignment="Left" Margin="176,195,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="154,226,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="54" Margin="91,294,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="257"/>
+        <TextBox x:Name="partNumber" HorizontalAlignment="Left" Height="24" Margin="154,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="description" HorizontalAlignment="Left" Height="54" Margin="91,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257"/>
         <Label Content="Description" HorizontalAlignment="Left" Margin="176,263,0,0" VerticalAlignment="Top"/>
         <Label Content="Notes" HorizontalAlignment="Left" Margin="193,353,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="50" Margin="91,384,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="257"/>
+        <TextBox x:Name="notes" HorizontalAlignment="Left" Height="50" Margin="91,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="296,128,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="126"/>
 
     </Grid>

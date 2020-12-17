@@ -45,29 +45,24 @@ namespace InventoryManagement
         {
             using (var db = new Model1())
             {
-                /*var query1 =
-                    from partnumt in db.tblPartNums
-                    join lotnumt in db.tblLotNums
-                    join db.lotqtyt on lotnumt.ID = tblLotqty.lotID
-                    //on partnumt.CustomerID equals o.CustomerID into CustomersAndOrders      // place resuts in order
-                    //from ord in CustomersAndOrders.DefaultIfEmpty()         // Customers who do not have orders will have null orders
-                    select new                                              // Create a new anonymous object that customers and order info.
-                    {
-                        cust.CustomerID,                                // Using existing field
-                        CustomerName = cust.CustomerName.Trim(),        // creating a new field
-                        OrderNum = (ord == null) ? -1 : ord.OrderNum,   // if customer does not have an order
-                        // ProductName = (ord == null) ? String.Empty : ord.ProductName.Trim()
-                        ProductName = (ord == null) ? "Customer without order" : ord.ProductName.Trim()
-                    };
-                
-                Console.WriteLine("All Lots in db");
-                foreach (var item in query1)
-                {
-                    Console.WriteLine($"{item.CustomerID} {item.CustomerName.Trim()} {item.ProductName.Trim()}, {item.ProductName}");
-                }
-                Console.WriteLine();
-                */
-                
+                var query1 =
+                  from lotNum in db.tblLotNums
+                  join qty in db.tblLotqties on lotNum.ID equals qty.lotID
+                  join part in db.tblPartNums on lotNum.ID equals part.ID into joinedTables
+                  from dt in joinedTables.DefaultIfEmpty()
+                  select new
+                  {
+                      lotNum.lotnum,
+                      lotNum.tblPartNum.partdesc,
+                      lotNum.lotComments,
+                      qty.QTY_Added_Removed,
+                      lotNum.lotuam,
+                      qty.StatusOfitem,
+                      qty.a_location,
+                      lotNum.lotnote
+                  };
+
+                lotDataGrid.ItemsSource = query1.ToList();
             }
 
         }
@@ -82,8 +77,7 @@ namespace InventoryManagement
             {
                 var query2 =
                     from lotnumt in db.tblLotNums
-                    from partnumt in db.tblPartNums
-                    where lotnumt.lotnum == input || partnumt.partnum == input
+                    where lotnumt.lotnum == input || lotnumt.tblPartNum.partnum == input
                     select lotnumt;
 
 
